@@ -1,0 +1,304 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #eaeaea;  /* Light text for high contrast */
+    background-color: #121212;  /* Dark background for modern look */
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+    border-bottom: 3px solid #00eaff;  /* Neon cyan border for a pop */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #00eaff;  /* Cyan border around profile photo */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #00eaff;  /* Neon cyan text */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    font-weight: 300; /* Light font weight for contrast */
+}
+
+.main-nav {
+    margin-top: 30px;
+}
+
+.main-nav a {
+    color: #00eaff;  /* Neon cyan for nav links */
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 6px 12px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00eaff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    transform: scaleX(1);  /* Sliding underline effect */
+}
+
+.main-nav a:hover {
+    color: #ffffff;  /* White text when hovered */
+}
+
+/* Typing Effect Cursor */
+.typing::after {
+    content: '|';
+    animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Skills Section */
+.skills {
+    padding: 80px 0;
+    background: #1f1f1f;  /* Dark background for skills section */
+}
+
+.skills-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: #1f1f1f;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill h3 {
+    margin-top: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.skill p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.skill:hover {
+    transform: translateY(-10px); /* Slight hover lift effect */
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.skill:hover img {
+    transform: scale(1.05); /* Slight image zoom on hover */
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    background: #252525;  /* Dark background for projects */
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #333;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+    margin-top: 15px;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.project a {
+    color: #00eaff;  /* Neon cyan links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #ffffff;  /* White color on hover */
+}
+
+.project:hover {
+    transform: translateY(-10px);  /* Hover effect */
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Hobbies Section */
+.hobbies {
+    padding: 80px 0;
+    background: #1f1f1f;  /* Dark background for hobbies */
+}
+
+.hobbies-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    background: #333;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby h3 {
+    margin-top: 15px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.hobby:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Scroll to Top Button */
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00eaff;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.scrollToTopBtn:hover {
+    background-color: #00b3b3;  /* Slightly darker cyan on hover */
+}
+
+.scrollToTopBtn:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+.footer {
+    background: #121212;  /* Dark footer background */
+    color: #eaeaea;
+    padding: 25px 0;
+    text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .main-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav a {
+        margin: 10px 0;
+        font-size: 1.3em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .skills-gallery,
+    .project-gallery,
+    .hobbies-gallery {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skill, .project, .hobby {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+}
